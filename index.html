@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./index.css">
+    <title>Form Mahasiswa</title>
+  </head>
+  <body>
+    <div
+      class="min-h-screen bg-slate-900 min-h-screen flex items-center justify-center"
+    >
+      <div
+        class="backdrop-blur-sm bg-white/80 p-5 max-w-md w-full rounded-md shadow-white/10 shadow-sm"
+      >
+        <form
+        id="submit"
+          class="text-black text-md flex flex-col space-y-3"
+          autocomplete="off"
+        >
+          <div class="flex flex-col w-full space-y-3 tracking-wide">
+            <label class="text-lg tracking-wide font-mono" 
+            for="namaMahasiswa"></label>
+              Nama Mahasiswa</label
+            >
+            <input
+            type="text"
+            name="namaMahasiswa"
+            id="namaMahasiswa" 
+            class="border-2 namaMahasiswa w-full p-2 rounded-lg focus:outine-none focus:outline-none"
+            autocomplete="off"
+            aria-autocomplete="off"
+          />
+
+            <span class="block namaMahasiswaError text-red-500 text-xs hidden">error</span>
+          </div>
+          <div lass="flex flex-col w-full space-y-3 tracking-wide">
+            <label class="text-lg tracking-wide font-mono" for="namaMahasiswa">
+              NRP</label
+            >
+            <input
+              type="text"
+              name="nrp"
+              id="nrp"
+              class="border-2 nrp w-full p-2 rounded-lg focus:outine-none focus:outline-none"
+              autocomplete="off"
+            />
+            <span class="block nrpError text-red-500 text-xs hidden">error</span>
+          </div>
+          <div lass="flex flex-col w-full space-y-3 tracking-wide">
+            <label  class="text-lg tracking-wide font-mono" for="mataKuliah"> Mata Kuliah</label>
+            <input
+              type="text"
+              name="mataKuliah"
+              id="mataKuliah"
+              class="border-2 mataKuliah w-full p-2 rounded-lg focus:outine-none focus:outline-none"
+              autocomplete="off"
+            />
+            <span class="mataKuliahError text-red-500 text-xs  hidden">error</span>
+          </div>
+          <div lass="flex flex-col w-full space-y-3 tracking-wide">
+            <label  class="text-lg tracking-wide font-mono" for="namaDosen"> Nama Dosen</label>
+            <input
+              type="text"
+              name="namaDosen"
+              id="namaDosen"
+              class="border-2 namaDosen w-full p-2 rounded-lg focus:outine-none focus:outline-none"
+              autocomplete="off"
+            />
+            <span class="namaDosenError text-red-500 text-xs  hidden">error</span>
+          </div>
+          <div class="">
+            <input value="Submit" type="submit" id="btn" class="px-4 py-3 mt-5 rounded-md bg-slate-600 w-full text-white tracking-wide transition-all duration-300 ease-in-out hover:bg-slate-900 
+            cursor-pointer disabled:cursor-not-allowed disabled:opacity-20"/>
+
+          </div>
+          <div id="success-message" class="hidden text-green-500 text-md font-semibold">Form submitted successfully!</div>
+        </form>
+      </div>
+    </div>
+        <script  src="./index.js"></script>
+
+  </body>
+</html>
